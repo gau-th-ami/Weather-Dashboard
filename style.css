@@ -1,0 +1,231 @@
+body
+{
+    background: url('images/Sunnyimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Rubik", sans-serif;
+    color: white;
+}
+.searchBar
+{
+    height: 10vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.inputfield
+{
+    outline: none;
+}
+.searchBarParentDiv
+{
+    width: 30%;
+    height: fit-content;
+    position: relative;
+}
+.inputfield
+{
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px;
+
+}
+.searchIcon{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.searchIcon:hover
+{
+    cursor: pointer;
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+.mainContentParentDiv
+{
+    height: 90vh;
+    flex-direction: row;
+}
+.leftDiv
+{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.leftChild
+{
+    background: rgba(212, 212, 212, 0.4);
+    width: 85%;
+    height: 40vh;
+    margin: auto;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+}
+.currentTempDiv h6
+{
+    font-size: larger;
+
+
+}
+#cityName
+{
+    font-size: xx-large;
+}
+#cityTemp
+{
+    font-size: x-large;
+}
+
+
+.rightDiv
+{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#comingFiveDaysTitle
+{
+    font-size: x-large;
+}
+.rightRow
+{
+    height: 27vh;
+    width: 100%;
+}
+.extraMetric
+{
+    background: rgba(212, 212, 212, 0.4);
+    padding: 5% 2%;
+    width: fit-content;
+    border-radius: 15px;
+    align-items: center;
+}
+.rowTwoDiv
+{
+    background: rgba(212, 212, 212, 0.4);
+    backdrop-filter: blur(15px);
+    width: 45%;
+    height: 85%;
+    border-radius: 15px;
+}
+.todayTemp
+{
+    background: rgba(212, 212, 212, 0.4);
+    width: fit-content;
+    padding: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+@media only screen and (max-width:767px)
+{
+    .leftDiv
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .rightDiv
+    {
+        width: 100%;
+    }
+    .mainContentParentDiv
+    {
+        height: 90vh;
+        flex-direction: column;
+    }
+    .searchBar
+    {
+        width: 100%;
+    }
+    .searchBarParentDiv 
+    {
+        width: 85%;  /* take more width on small screens */
+        height: fit-content;
+        position: relative;
+    }
+    .inputfield 
+    {
+        font-size: 16px; /* readable text */
+        padding: 12px 45px 12px 15px; /* space for icon */
+    }
+    .searchIcon 
+    {
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%); /* vertically center the icon */
+    }
+    .rowOne
+    {
+        /*flex-direction: column;*/
+        flex-wrap: wrap;
+        width: 85%;
+        margin: auto;
+        
+    }
+    .rowTwo
+    {
+        flex-direction: column;
+    }
+    .rowTwo
+    {
+        gap: 10px;
+        height: 30vh;
+    }
+    .rowTwoDiv
+    {
+        background: rgba(212, 212, 212, 0.4);
+        backdrop-filter: blur(15px);
+        width: 85%;
+        height: 85%;
+        border-radius: 15px;
+    }
+    .rowThree
+    {
+        width: 85%;
+        margin: auto;
+    }
+    .todayTempParentDiv
+    {
+        width: 85%;
+        flex-wrap: wrap;
+        margin: auto;
+        gap: 15px;
+    }
+}
+
+/* Universal hover effect for card-like elements */
+.leftChild,
+.extraMetric,
+.rowTwoDiv,
+.todayTemp {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.leftChild:hover,
+.extraMetric:hover,
+.rowTwoDiv:hover,
+.todayTemp:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(18px);
+}
